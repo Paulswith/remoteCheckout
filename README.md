@@ -37,8 +37,10 @@ How TO USE:
 
 签入 & 签出:
 =============
-  发送 **CheckOut**<无所谓大小写>  -> 签出
-  发送 **CheckIn**<无所谓大小写>   -> 签入
+   'forword me command,Example :  
+   checkin: checkin  
+   checkout: checkout  
+   ci<co>codexxxx: checkin<out> and input verification code,xxxx is the verification code in picture which last one i send.'
 
 
 Roses are red
