@@ -3,7 +3,7 @@
 defind file
 '''
 
-
+CONTACT_ONE = 'selfdefind'  #wechat name
 DO_WEBSITE = 'http://selfdefind'
 CODE_PHOTO_PATH = '/Users/selfdefind/temp.png'  #to save screenshot, must be absolute path
 USER_NAME = 'selfdefind'            #username

@@ -12,7 +12,7 @@ import settings
 code_photo_path = settings.CODE_PHOTO_PATH
 
 bot = Bot(cache_path=True,console_qr=True)
-my_friend_Dobby = bot.friends().search('Dobby')[0]
+my_friend_Dobby = bot.friends().search(settings.CONTACT_ONE)[0]
 fireFox = AutoCheckout(settings.USER_NAME, settings.PASS_WORD)
 
 def page(number,path):
