@@ -9,7 +9,7 @@ PASS_WORD = 'selfdefind'            #password
 
 包依赖
 =============
-  1 selenium  web 自动化
+  1 seleniumweb 自动化  
   2 [wxpy](https://github.com/youfou/wxpy "Title")  一款优雅微信个人号,安装方法:
  <pre><code>pip install -U wxpy
 </code></pre>
