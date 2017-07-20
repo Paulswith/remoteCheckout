@@ -1,6 +1,9 @@
 
 settings.py 中需要填充所需信息:
-<pre><code> PASS
+<pre><code>
+CODE_PHOTO_PATH = '/Users/selfdefind/temp.png'  #to save screenshot, must be absolute path
+USER_NAME = 'selfdefind'            #username
+PASS_WORD = 'selfdefind'            #password
 </code></pre>
 
 包依赖
