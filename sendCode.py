@@ -48,19 +48,17 @@ def forward_boss_message(msg):
         '''
         Example:  
         cicodexxxx 
-        ci -> checkIn
-        co -> checkout
         xxxx ->verification code
         '''
-        if lower_recive[:2] == 'ci':
-            number = fireFox.codePerform(lower_recive[-4:])
-            page(number, code_photo_path)
-
-        elif lower_recive[:2] == 'co':
-            number = fireFox.codePerform(lower_recive[-4:])
-            page(number, code_photo_path)
-        else:
-            my_friend_Dobby.send('valid command')
+        # if lower_recive[:2] == 'ci':
+        #     number = fireFox.codePerform(lower_recive[-4:])
+        #     page(number, code_photo_path)
+        #
+        # elif lower_recive[:2] == 'co':
+        number = fireFox.codePerform(lower_recive[-4:])
+        page(number, code_photo_path)
+        # else:
+        #     my_friend_Dobby.send('valid command')
 
     elif 'help' in lower_recive:
         my_friend_Dobby.send(settings.HELP_COMMAND)
