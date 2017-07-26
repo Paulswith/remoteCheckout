@@ -35,12 +35,13 @@ How TO USE:
   4. 改命令执行后出现的终端二维码, 请微信扫描登录
     **Login successfully as xxx**则代表登录成功
 
-签入 & 签出:
+command:  checkin/checkout/code:
 =============
    'forword me command,Example :  
    checkin: checkin  
    checkout: checkout  
    ci<co>codexxxx: checkin<out> and input verification code,xxxx is the verification code in picture which last one i send.'
+   example: cicoqwer
 
 
 Roses are red
