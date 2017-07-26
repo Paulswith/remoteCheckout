@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding:utf-8 -*-
 __author = 'Dobby'
 
@@ -101,7 +102,7 @@ class AutoCheckout(object):
                 self.get_screenshot_as_file()     #截图到本地 , 不清空,  让存在cookie
                 return 0                #存在验证码返回2
             self.tryfind(self.element['签到确定'], way=By.XPATH).click()  # 点击确定
-            if self.tryfind(self.element['签出成功知会'], way=By.XPATH).text == u'签入成功知会':
+            if self.tryfind(self.element['签出成功知会'], way=By.XPATH,timeOut=30).text == u'签入成功知会':
                 print ' # 本次%s成功 at %s    # ' % ('签入', time.ctime())
                 self.clearCookies()
         except:
@@ -127,7 +128,7 @@ class AutoCheckout(object):
                 self.get_screenshot_as_file()
                 return 0
             self.tryfind(self.element['签到确定'], way=By.XPATH).click()
-            if self.tryfind(self.element['签出成功知会'], way=By.XPATH).text == u'签出成功知会':
+            if self.tryfind(self.element['签出成功知会'], way=By.XPATH,timeOut=30).text == u'签出成功知会':
                 print ' # 本次%s成功 at %s    # ' % ('签出', time.ctime())
                 self.clearCookies()
         except:

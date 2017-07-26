@@ -40,8 +40,8 @@ command:  checkin/checkout/code:
    'forword me command,Example :  
    checkin: checkin  
    checkout: checkout  
-   ci<co>codexxxx: checkin<out> and input verification code,xxxx is the verification code in picture which last one i send.'
-   example: cicoqwer
+   codexxxx: checkin<out> and input verification code,xxxx is the verification code in picture which last one i send.'
+   example: codeqwer
 
 
 Roses are red
