@@ -34,6 +34,8 @@ def forward_boss_message(msg):
     fireFox.logEven(msg.text)
     lower_recive = msg.text.lower()
 
+    my_friend_Dobby.send('received: {} ({})'.format(msg.text, msg.type))
+
     if 'checkin' in lower_recive:
         number = fireFox.startCheckIn()
         page(number,code_photo_path)
@@ -59,7 +61,8 @@ def forward_boss_message(msg):
             page(number, code_photo_path)
         else:
             my_friend_Dobby.send('valid command')
-    else:
+
+    elif 'help' in lower_recive:
         my_friend_Dobby.send(settings.HELP_COMMAND)
 
 embed()
