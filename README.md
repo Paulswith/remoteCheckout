@@ -8,6 +8,7 @@ PASS_WORD = 'selfdefind'            #password
 </code></pre>
 
 包依赖
+<目前弃用wx-remote,固定检测时间执行>
 =============
   1 seleniumweb 自动化  
   2 [wxpy](https://github.com/youfou/wxpy "Title")  一款优雅微信个人号,安装方法:
