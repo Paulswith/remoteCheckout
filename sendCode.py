@@ -22,32 +22,36 @@ struct lambda func
 '''
 get_current_time = lambda: str(time.strftime('%H%M', time.localtime(time.time())))
 get_full_current_time = lambda: str(time.strftime('20%y年%m月%d日%H时%M分', time.localtime(time.time())))
+is_weekend = lambda : True if (str(time.strftime("%w", time.localtime())) == '7' or str(time.strftime("%w", time.localtime())) =='6') else False
 
 
 if __name__ == '__main__':
     #initial brower
     fireFox = AutoCheckout(settings.USER_NAME, settings.PASS_WORD)
     while 1:
-        c_time = get_current_time()
-        init_string = 'currentTime:{full_time},structTime:{struct_time}'.format(full_time=get_full_current_time(),struct_time=c_time)
-        fireFox.logEven(init_string)
+        #filter weekend
+        fireFox.logEven('is today weekend? // {}'.format('yes' if is_weekend() else 'not'))
+        if not is_weekend():
+            c_time = get_current_time()
+            init_string = 'currentTime:{full_time},structTime:{struct_time}'.format(full_time=get_full_current_time(),struct_time=c_time)
+            fireFox.logEven(init_string)
 
-        if  c_time < e_t_after and c_time > e_t_before:
-            for i in xrange(5):
-                is_succeed = fireFox.startCheckOut()
-                log_even = '-> the {count} : resultIs({result})'.format(count=i,result='succeed' if is_succeed else 'faild')
-                fireFox.logEven(log_even)
-                if is_succeed == True:
-                    break
+            if  c_time < e_t_after and c_time > e_t_before:
+                for i in xrange(5):
+                    is_succeed = fireFox.startCheckOut()
+                    log_even = '-> the {count} : resultIs({result})'.format(count=i,result='succeed' if is_succeed else 'faild')
+                    fireFox.logEven(log_even)
+                    if is_succeed == True:
+                        break
 
-        if c_time < m_t_before and c_time > m_t_after:
-            for i in xrange(5):
-                is_succeed = fireFox.startCheckIn()
-                log_morning ='-> the {count} : resultIs({result})'.format(count=i, result='succeed' if is_succeed else 'faild')
-                fireFox.logEven(log_morning)
-                if is_succeed == True:
-                    break
-        time.sleep(20*60)
+            if c_time < m_t_before and c_time > m_t_after:
+                for i in xrange(5):
+                    is_succeed = fireFox.startCheckIn()
+                    log_morning ='-> the {count} : resultIs({result})'.format(count=i, result='succeed' if is_succeed else 'faild')
+                    fireFox.logEven(log_morning)
+                    if is_succeed == True:
+                        break
+        time.sleep(29*60)
 
 
 #discard wxpy
