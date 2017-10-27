@@ -32,7 +32,7 @@ class AutoCheckout(object):
 
     def logEven(self,str):
         '''
-        打印日志
+        打印日志t tongyong
         '''
         print '///= = || %s:%s || = =/\/\/\/'%(time.ctime(),str)
 
